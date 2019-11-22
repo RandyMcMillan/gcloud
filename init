@@ -1,0 +1,8 @@
+sudo apt-get -y update
+sudo apt-get install -y xinit
+sudo apt-get install -y emacs
+touch ~/.xinitrc
+echo "exec emacs" > ~/.xinitrc
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+echo "(set-frame-parameter nil 'fullscreen 'fullboth)" >> ~/.emacs.d/init.el
+
